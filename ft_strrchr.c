@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elisa <elisa@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ejahan <ejahan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:04:22 by elisa             #+#    #+#             */
-/*   Updated: 2020/12/01 22:17:48 by elisa            ###   ########.fr       */
+/*   Updated: 2021/06/03 16:27:59 by ejahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strrchr(const char *s, int c)
 	char	*str;
 
 	i = 0;
-	str = (char*)s;
+	str = (char *)s;
 	while (str[i])
 		i++;
 	while (str[i--] != c)

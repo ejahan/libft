@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elisa <elisa@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ejahan <ejahan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:03:46 by elisa             #+#    #+#             */
-/*   Updated: 2020/12/01 22:04:17 by elisa            ###   ########.fr       */
+/*   Updated: 2021/06/03 14:59:39 by ejahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_bzero(void *s, size_t n)
 	char			*str;
 
 	i = 0;
-	str = (char*)s;
+	str = (char *)s;
 	if (n != 0)
 	{
 		while (i < n)

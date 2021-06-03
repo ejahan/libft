@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elisa <elisa@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ejahan <ejahan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 16:00:49 by elisa             #+#    #+#             */
-/*   Updated: 2020/12/04 17:41:00 by elisa            ###   ########.fr       */
+/*   Updated: 2021/06/03 16:21:47 by ejahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	unsigned char	d;
 
 	i = 0;
-	s1 = (unsigned char*)src;
-	s2 = (unsigned char*)dst;
+	s1 = (unsigned char *)src;
+	s2 = (unsigned char *)dst;
 	d = (unsigned char)c;
 	while (i < n)
 	{

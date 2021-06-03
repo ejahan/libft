@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elisa <elisa@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ejahan <ejahan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 16:38:49 by elisa             #+#    #+#             */
-/*   Updated: 2020/12/01 22:13:42 by elisa            ###   ########.fr       */
+/*   Updated: 2021/06/03 16:26:07 by ejahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	ft_destlen(char const *s1, char const *s2)
 	return (j + i);
 }
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
 	int		j;
@@ -34,7 +34,8 @@ char		*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	if (!(str = malloc(sizeof(*str) * (ft_destlen(s1, s2) + 1))))
+	str = malloc(sizeof(*str) * (ft_destlen(s1, s2) + 1));
+	if (!(str))
 		return (NULL);
 	while (s1[i])
 	{

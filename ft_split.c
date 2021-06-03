@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elisa <elisa@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ejahan <ejahan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 17:41:34 by elisa             #+#    #+#             */
-/*   Updated: 2020/12/01 22:27:00 by elisa            ###   ########.fr       */
+/*   Updated: 2021/06/03 16:31:07 by ejahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,21 +56,23 @@ static int	ft_elements(const char *s, char c)
 	return (compt);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char			**result;
 	int				i;
 	unsigned int	j;
 	unsigned int	k;
 
-	if (!(result = malloc(sizeof(char*) * (ft_elements(s, c) + 1))))
+	result = malloc(sizeof(char *) * (ft_elements(s, c) + 1));
+	if (!(result))
 		return (NULL);
 	i = 0;
 	j = 0;
 	while (i < ft_elements(s, c))
 	{
 		k = 0;
-		if (!(result[i] = malloc(ft_len(&s[j], c) + 1)))
+		result[i] = malloc(ft_len(&s[j], c) + 1);
+		if (!(result[i]))
 			return (NULL);
 		while (ft_is_c(s[j], c) == 0)
 			j++;

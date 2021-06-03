@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elisa <elisa@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ejahan <ejahan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 12:13:01 by elisa             #+#    #+#             */
-/*   Updated: 2020/12/01 22:16:23 by elisa            ###   ########.fr       */
+/*   Updated: 2021/06/03 16:28:43 by ejahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	s_len(const char *s)
 	return (i);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
@@ -54,7 +54,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 		i--;
 		j++;
 	}
-	if (!(str = malloc(sizeof(char) * (k - j - n + 1))))
+	str = malloc(sizeof(char) * (k - j - n + 1));
+	if (!(str))
 		return (NULL);
 	i = 0;
 	while (n < (k - j))
